@@ -1,15 +1,33 @@
-import React from 'react';
-import preload from '../data.json';
-// import { connect } from 'react-redux';
-// import ShowCard from './ShowCard';
-// import Header from './Header';
+import React, { Component } from "react";
+import ShowCard from "./ShowCard";
+import preload from "../data.json";
 
-const Search = () => (
-  <div className="search">
-    {preload.shows.map((show) => <h3>{show.title}</h3>)}
-  </div>
-);
+class Search extends Component {
+    state = {
+      searchTerm: ''
+    };
 
+  handleSearchTermChange = event => {
+    this.setState({ searchTerm: event.target.value });
+  };
+  render() {
+    return (
+      <div className="search">
+        <header>
+          <h1>{this.state.searchTerm}</h1>
+          <input
+            onChange={this.handleSearchTermChage}
+            value={this.state.searchTerm}
+            type="text"
+            placeholder="Search"
+          />
+        </header>
+        <div>
+          {preload.shows.map(show => <ShowCard key={show.imdbID} {...show} />)}
+        </div>
+      </div>
+    );
+  }
+}
 
-// export const Unwrapped = Search;
-export default Search
+export default Search;

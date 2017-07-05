@@ -8,6 +8,9 @@
       "loose": true,
       "modules": false
     }]
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties"
   ]
 }
 
