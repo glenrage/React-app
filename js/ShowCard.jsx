@@ -19,7 +19,10 @@ const Image = styled.img`
 
 const ShowCard = props => (
   <Wrapper>
-    <Image alt={`${props.title} Show Poster`} src={`/public/img/posters/${props.poster}`} />
+    <Image
+      alt={`${props.title} Show Poster`}
+      src={`/public/img/posters/${props.poster}`}
+    />
     <div>
       <h3>{props.title}</h3>
       <h4>({props.year})</h4>
@@ -32,7 +35,7 @@ ShowCard.propTypes = {
   poster: string.isRequired,
   title: string.isRequired,
   year: string.isRequired,
-  description: string.isRequired
+  description: string.isRequired,
 };
 
 export default ShowCard;
