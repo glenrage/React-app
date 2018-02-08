@@ -1,13 +1,5 @@
-# A Complete Intro to React
+# ReduxCasts
 
-Welcome to a complete intro to React! The site actual workshop material for this repo can be found [here][gh-page]. On the master branch you will find the completed project. On the start branch you will find the barebones boilerplater of the project designed to help you get started.
+Completed code examples from [Modern React with Redux](https://udemy.com/react-redux)
 
-## Contributing
-
-Please contribute, file issues, and make PRs. More than anything I'm sure there are typos abounding.
-
-## License
-
-MIT
-
-[gh-page]: http://btholt.github.io/complete-intro-to-react/
+Each example from the course can be found within this repo. You can either look at the files in a completed state, or check out the changes that were made in a particular section by clicking on one of the links below.
