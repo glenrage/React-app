@@ -5,14 +5,13 @@ import Payments from './Payments';
 
 class Header extends Component {
   renderContent() {
-    console.log(this.props.auth);
     switch (this.props.auth) {
       case null:
-        return 'still deciding';
+        return;
       case false:
         return (
           <li>
-            <a href="/auth/google">Login with Google</a>
+            <a href="/auth/google">Login With Google</a>
           </li>
         );
       default:
@@ -20,15 +19,17 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
+          <li key="3" style={{ margin: '0 10px' }}>
+            Credits: {this.props.auth.credits}
+          </li>,
           <li key="2">
             <a href="/api/logout">Logout</a>
-          </li>,
-          <li key="3">Credits : {this.props.auth}</li>
+          </li>
         ];
     }
   }
+
   render() {
-    console.log(this.props);
     return (
       <nav>
         <div className="nav-wrapper">
@@ -46,10 +47,7 @@ class Header extends Component {
 }
 
 function mapStateToProps({ auth }) {
-  return;
-  {
-    auth;
-  }
+  return { auth };
 }
 
-export default connect()(Header);
+export default connect(mapStateToProps)(Header);

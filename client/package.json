@@ -4,17 +4,17 @@
   "private": true,
   "proxy": {
     "/auth/google": {
-      "target": "http://localhost:5000"
+      "target": "http://localhost:5000",
+      "secure": false
     },
     "/api/*": {
-      "target": "http://localhost:5000"
-    },
-    "/*": {
-      "target": "http://localhost:5000"
+      "target": "http://localhost:5000",
+      "secure": false
     }
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash": "^4.17.5",
     "materialize-css": "^0.100.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -23,6 +23,7 @@
     "react-scripts": "1.1.1",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
